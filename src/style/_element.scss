@@ -1,12 +1,110 @@
-// @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
 
 // $ec-color-primary: #676767;
 // $ec-color-card-bg: #ffffff;
 // $ec-color-more-btn: #afafaf;
 //
-// $ec-font-family: 'Montserrat', sans-serif;
-// $ec-basic-font-size: 13px;
+$font-family: 'Montserrat', sans-serif;
+$basic-font-size: 13px;
 
-.element {
+$color-text: #55657e;
+$color-text-light: lighten($color-text, 20%);
+$color-text-lightest: lighten($color-text, 40%);
 
+$color-1: #ff4b80;
+$color-2: #3fd4b0;
+$color-3: #557cee;
+$color-4: #ff935d;
+
+.element-timeline {
+    background-color: #f5f5f5;
+    font-size: $basic-font-size;
+    font-family: $font-family;
+    letter-spacing: 2px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+    .title {
+        h3 {
+            font-size: 2em;
+            color: $color-text;
+            padding-bottom: 20px;
+            font-weight: 300;
+        }
+    }
+
+    .timeline-item {
+        margin-top: 0;
+        padding-top: 0;
+        margin-left: 10px;
+        padding-left: 25px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        border-left: 1px solid #e5e5e5;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            left: -8px;
+            border-radius: 50%;
+            border-color: $color-1;
+            border-width: 3px;
+            border-style: solid;
+            background: #fff;
+        }
+
+        &:nth-child(1) {
+            &:before {
+                border-color: $color-1;
+            }
+        }
+
+        &:nth-child(2) {
+            &:before {
+                border-color: $color-2;
+            }
+        }
+
+        &:nth-child(3) {
+            &:before {
+                border-color: $color-3;
+            }
+        }
+
+        &:last-child {
+            border-left: 0px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .time {
+                color: $color-text-light;
+                font-size: 1em;
+                font-weight: 300;
+            }
+
+            .utils {
+                a {
+                    text-decoration: none;
+                    color: $color-text-lightest;
+                }
+            }
+        }
+
+        .description {
+            padding: 10px 0px;
+            color: $color-text;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+    }
 }

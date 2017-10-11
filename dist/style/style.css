@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
 html, body {
   background-color: #e6e6e6;
   display: flex;
@@ -8,3 +9,63 @@ html, body {
 
 .container {
   max-width: 500px; }
+
+.element-timeline {
+  background-color: #f5f5f5;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; }
+  .element-timeline .title h3 {
+    font-size: 2em;
+    color: #55657e;
+    padding-bottom: 20px;
+    font-weight: 300; }
+  .element-timeline .timeline-item {
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 10px;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    border-left: 1px solid #e5e5e5;
+    position: relative; }
+    .element-timeline .timeline-item:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: -8px;
+      border-radius: 50%;
+      border-color: #ff4b80;
+      border-width: 3px;
+      border-style: solid;
+      background: #fff; }
+    .element-timeline .timeline-item:nth-child(1):before {
+      border-color: #ff4b80; }
+    .element-timeline .timeline-item:nth-child(2):before {
+      border-color: #3fd4b0; }
+    .element-timeline .timeline-item:nth-child(3):before {
+      border-color: #557cee; }
+    .element-timeline .timeline-item:last-child {
+      border-left: 0px; }
+    .element-timeline .timeline-item .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .element-timeline .timeline-item .header .time {
+        color: #8998b0;
+        font-size: 1em;
+        font-weight: 300; }
+      .element-timeline .timeline-item .header .utils a {
+        text-decoration: none;
+        color: #c6cdd9; }
+    .element-timeline .timeline-item .description {
+      padding: 10px 0px;
+      color: #55657e;
+      font-size: 1.1em;
+      font-weight: 500; }
