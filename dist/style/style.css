@@ -1,0 +1,10 @@
+html, body {
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; }
+
+.container {
+  max-width: 500px; }
